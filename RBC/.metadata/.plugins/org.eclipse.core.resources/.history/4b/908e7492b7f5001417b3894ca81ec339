@@ -1,0 +1,73 @@
+#include "motor.h"
+
+void initializePWMTimer()
+{
+	GPIO_InitTypeDef pwmgpio;
+	pwmgpio.GPIO_Mode = GPIO_Mode_AF_PP;
+	pwmgpio.GPIO_Speed = GPIO_Speed_50MHz;
+	pwmgpio.GPIO_Pin = MOTOR1_PWM1_PIN;
+	GPIO_Init(MOTOR1_PWM1_GPIO, &pwmgpio);
+
+	pwmgpio.GPIO_Pin = MOTOR1_PWM2_PIN;
+	GPIO_Init(MOTOR1_PWM2_GPIO, &pwmgpio);
+
+	GPIO_PinRemapConfig(GPIO_FullRemap_TIM3, ENABLE);
+
+
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+    timerInitStructure.TIM_Prescaler = 19; //PWM 3.6kHz
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 999;
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM3, &timerInitStructure);
+    TIM_Cmd(TIM3, ENABLE);
+
+    TIM_OCInitTypeDef outputChannelInit = {0,};
+    outputChannelInit.TIM_OCMode = TIM_OCMode_PWM1;
+    outputChannelInit.TIM_Pulse = 100;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+    TIM_OC1Init(TIM3, &outputChannelInit);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    TIM_OC3Init(TIM3, &outputChannelInit);
+    TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+	/*
+	 * TIM 3 is for servo PWM (50 Hz)
+	 */
+
+	//TIM3->PSC = 94;
+	//TIM3->ARR = 5100;
+}
+
+void initializeDirectionOutput()
+{
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_NoJTRST,ENABLE); // Disable NJTRST, PB4 is Alternate Function
+	GPIO_InitTypeDef dir;
+	dir.GPIO_Mode = GPIO_Mode_Out_PP;
+	dir.GPIO_Speed = GPIO_Speed_2MHz;
+
+	dir.GPIO_Pin = MOTOR1_DIR2_PIN;
+	GPIO_Init(MOTOR1_DIR2_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_DIR1A_PIN;
+	GPIO_Init(MOTOR1_DIR1A_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_EN1_PIN;
+	GPIO_Init(MOTOR1_EN1_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_EN2_PIN;
+	GPIO_Init(MOTOR1_EN2_GPIO, &dir);
+
+	MOTOR1_EN1_OFF;
+	MOTOR1_EN2_OFF;
+}
+
+void safeStop()
+{
+	TIM2->CCR1 = 0; // stop motor
+	TIM3->CCR2 = 127+255;
+}

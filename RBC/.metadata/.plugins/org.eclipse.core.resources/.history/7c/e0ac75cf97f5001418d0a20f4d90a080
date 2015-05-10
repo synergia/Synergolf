@@ -1,0 +1,76 @@
+#include "motor.h"
+
+void initializePWMTimer()
+{
+	GPIO_InitTypeDef pwmgpio;
+	pwmgpio.GPIO_Mode = GPIO_Mode_AF_PP;
+	pwmgpio.GPIO_Speed = GPIO_Speed_50MHz;
+	pwmgpio.GPIO_Pin = MOTOR1_PWM1_PIN;
+	GPIO_Init(MOTOR1_PWM1_GPIO, &pwmgpio);
+
+	pwmgpio.GPIO_Pin = MOTOR1_PWM2_PIN;
+	GPIO_Init(MOTOR1_PWM2_GPIO, &pwmgpio);
+
+	GPIO_PinRemapConfig(GPIO_FullRemap_TIM3, ENABLE);
+
+
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+    timerInitStructure.TIM_Prescaler = 4000;
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 1000;
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM3, &timerInitStructure);
+    TIM_Cmd(TIM3, ENABLE);
+
+    TIM_OCInitTypeDef outputChannelInit = {0,};
+    outputChannelInit.TIM_OCMode = TIM_OCMode_PWM1;
+    outputChannelInit.TIM_Pulse = 400;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+    TIM_OC1Init(TIM3, &outputChannelInit);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
+	/*
+	 * TIM 3 is for servo PWM (50 Hz)
+	 */
+	TIM3->CR1 &= 0b1111110000000000;
+	TIM3->CR1 |= TIM_CR1_URS | TIM_CR1_CEN;
+
+	TIM3->PSC = 94;
+	TIM3->ARR = 5100;
+
+	TIM3->CCMR1 |= TIM_OCMode_PWM2 | TIM_OCMode_PWM2 << 8;
+	TIM3->CCER |= TIM_OCPolarity_Low << 4 | TIM_CCER_CC2E;
+
+	// 1,5 ms
+	// TIM3->CCR2 for servo PWM
+	TIM3->CCR2 = (127 + SERVO_COMPENSATION) + 255;
+}
+
+void initializeDirectionOutput()
+{
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_NoJTRST,ENABLE); // Disable NJTRST, PB4 is Alternate Function
+	GPIO_InitTypeDef dir;
+	dir.GPIO_Mode = GPIO_Mode_Out_PP;
+	dir.GPIO_Speed = GPIO_Speed_2MHz;
+	dir.GPIO_Pin = MOTOR1_DIR2_PIN;
+	GPIO_Init(MOTOR1_DIR2_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_DIR1_PIN;
+	GPIO_Init(MOTOR1_DIR1_GPIO, &dir);
+
+	dir.GPIO_Pin = GPIO_Pin_1;
+	GPIO_Init(GPIOC, &dir);
+
+	MOTOR1_DIR2_GPIO->ODR &= ~(MOTOR1_DIR2_PIN);
+	MOTOR1_DIR1_GPIO->ODR &= ~(MOTOR1_DIR1_PIN);
+}
+
+void safeStop()
+{
+	TIM2->CCR1 = 0; // stop motor
+	TIM3->CCR2 = 127+255;
+}

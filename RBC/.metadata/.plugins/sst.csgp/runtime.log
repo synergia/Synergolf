@@ -1,0 +1,50 @@
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/8, 2015   12:0  36.194]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/8, 2015   12:0  41.154]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/8, 2015   12:36  15.442]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/8, 2015   12:36  19.927]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/8, 2015   19:24  49.753]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/8, 2015   19:24  53.972]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/9, 2015   11:31  27.35]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/9, 2015   11:31  35.363]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/10, 2015   18:54  10.404]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/10, 2015   18:54  15.181]
+------------------------------------

@@ -1,0 +1,28 @@
+#include "SysTick.h"
+#include "data.h"
+#include "motor.h"
+#include "I2C.h"
+
+extern volatile Data globalData;
+
+void initializeSysTick()
+{
+	/*
+	 * Interrupt every 1s:
+	 * 72 MHz / 8 = 9 -> count to 9000000
+	 */
+	SysTick_Config(1000000ul);
+	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
+}
+
+void SysTick_Handler(void)
+{
+   LED4_GPIO->ODR ^= LED4_PIN;
+   MOTOR_STEPPER_CLK_GPIO->ODR ^= MOTOR_STEPPER_CLK_PIN;
+   MOTOR_STEPPER_CW_GPIO->ODR ^= MOTOR_STEPPER_CW_PIN;
+
+   // check €connection
+   if (globalData.communication_safety == 0)
+	   safeStop();
+   globalData.communication_safety = 0;
+}

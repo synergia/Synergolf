@@ -1,0 +1,23 @@
+#ifndef MOTOR_H_
+#define MOTOR_H_
+
+#include <stdio.h>
+#include <stdint.h>
+#include "PinDefines.h"
+#include "system_stm32f10x.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_tim.h"
+
+#define SERVO_COMPENSATION -30
+
+#define MOTOR1_EN1_ON GPIO_SetBits(MOTOR1_EN1_GPIO, MOTOR1_EN1_PIN)
+#define MOTOR1_EN2_ON GPIO_SetBits(MOTOR1_EN2_GPIO, MOTOR1_EN2_PIN)
+
+#define MOTOR1_EN1_OFF GPIO_ResetBits(MOTOR1_EN1_GPIO, MOTOR1_EN1_PIN)
+#define MOTOR1_EN2_OFF GPIO_ResetBits(MOTOR1_EN2_GPIO, MOTOR1_EN2_PIN)
+
+void initializePWMTimer();
+void initializeDirectionOutput();
+void safeStop();
+
+#endif

@@ -1,0 +1,13 @@
+avrtarget/ClockFrequency=8000000
+avrtarget/ExtRAMSize=0
+avrtarget/ExtendedRAM=false
+avrtarget/MCUType=atmega8
+avrtarget/UseEEPROM=false
+avrtarget/UseExtendedRAMforHeap=true
+avrtarget/avrdude/Fuses/ByteValues=228\:217
+avrtarget/avrdude/Fuses/FileName=
+avrtarget/avrdude/Fuses/MCUid=atmega8
+avrtarget/avrdude/Fuses/UseFile=false
+avrtarget/avrdude/Fuses/Write=true
+avrtarget/perConfig=false
+eclipse.preferences.version=1

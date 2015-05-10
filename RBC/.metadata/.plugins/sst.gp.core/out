@@ -1,0 +1,2 @@
+arm-atollic-eabi-gcc.exe: error: /nologo: No such file or directory
+arm-atollic-eabi-gcc.exe: error: /E: No such file or directory

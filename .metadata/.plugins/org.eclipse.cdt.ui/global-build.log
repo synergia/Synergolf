@@ -1,0 +1,453 @@
+16:51:58 **** Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega16 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3850 bytes (23.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:54:58 **** Clean-only build of configuration Debug for project PWM ****
+make clean 
+rm -rf  ./main.o  sizedummy  PWM.lss  ./main.d  PWM.elf
+ 
+16:54:59 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3678 bytes (44.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:55:35 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3678 bytes (44.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:56:35 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3678 bytes (44.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:00:06 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3196 bytes (39.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:00:31 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3196 bytes (39.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:01:20 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3186 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:03:30 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3186 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:04:35 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3188 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:04:48 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3188 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:05:45 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3188 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:06:16 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3188 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:06:55 **** Incremental Build of configuration Debug for project PWM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega8 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:32: warning: unused variable 'licznik'
+Finished building: ../main.c
+ 
+Building target: PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PWM.map -mmcu=atmega8 -o "PWM.elf"  ./main.o   
+Finished building target: PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PWM.elf  >"PWM.lss"
+Finished building: PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex PWM.elf  "PWM.hex"
+Finished building: PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega8 PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega8
+
+Program:    3188 bytes (38.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
