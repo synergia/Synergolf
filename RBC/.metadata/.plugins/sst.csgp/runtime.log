@@ -48,3 +48,43 @@ GUI is waiting for subprocess to be done...
 Execution done. EXIT CODE = 0
   Logging finished.  ## CURRENT TIME  : [5/10, 2015   18:54  15.181]
 ------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/11, 2015   11:4  25.651]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/11, 2015   11:4  31.336]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/12, 2015   12:25  23.771]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/12, 2015   12:25  29.452]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/13, 2015   10:17  43.423]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/13, 2015   10:17  49.627]
+------------------------------------
+
+------------------------------------
+  Logging start.  ## CURRENT TIME  : [5/13, 2015   16:50  8.643]  ## COMMAND LINE  : 
+cmd /C "gen_csini.exe"
+------------------------------------
+[STD-IN] : C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.csgp\bin\env_vars.txt
+GUI is waiting for subprocess to be done...
+Execution done. EXIT CODE = 0
+  Logging finished.  ## CURRENT TIME  : [5/13, 2015   16:50  13.648]
+------------------------------------

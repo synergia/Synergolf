@@ -6,62 +6,38 @@ extern volatile Data globalData;
 
 void initializeUSART()
 {
-	/*
-	 * PIN configuration
-	 */
 	GPIO_InitTypeDef usart_gpio;
 
 	usart_gpio.GPIO_Speed = GPIO_Speed_50MHz;
-	/*usart_gpio.GPIO_Pin = RX_PIN;
+
+
+	usart_gpio.GPIO_Pin = RX3_PIN;
 	usart_gpio.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 
-	GPIO_Init(RX_GPIO, &usart_gpio);
+	GPIO_Init(RX3_GPIO, &usart_gpio);
 
-	usart_gpio.GPIO_Pin = TX_PIN;
+	usart_gpio.GPIO_Pin = TX3_PIN;
 	usart_gpio.GPIO_Mode = GPIO_Mode_AF_PP;
 
-	GPIO_Init(TX_GPIO, &usart_gpio);*/
+	GPIO_Init(TX3_GPIO, &usart_gpio);
 
-	usart_gpio.GPIO_Pin = RX2_PIN;
-	usart_gpio.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-
-	GPIO_Init(RX2_GPIO, &usart_gpio);
-
-	usart_gpio.GPIO_Pin = TX2_PIN;
-	usart_gpio.GPIO_Mode = GPIO_Mode_AF_PP;
-
-	GPIO_Init(TX2_GPIO, &usart_gpio);
-
-	/*
-	 * USART configuration
-	 */
-	//USART_Cmd(USART1, ENABLE);
 
 	USART_InitTypeDef usart_conf;
 
-	// usart_conf.USART_BaudRate=9600; HC-05
-	usart_conf.USART_BaudRate = 9600; // BTM 222
+	usart_conf.USART_BaudRate = 9600; // hc05
 	usart_conf.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
 	usart_conf.USART_Mode=USART_Mode_Rx | USART_Mode_Tx;
 	usart_conf.USART_Parity=USART_Parity_No;
 	usart_conf.USART_StopBits=USART_StopBits_1;
 	usart_conf.USART_WordLength=USART_WordLength_8b;
 
-	//USART_Init(USART1, &usart_conf);
-	//USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 
-	//NVIC_EnableIRQ(USART1_IRQn);
+	USART_Cmd(USART3, ENABLE);
 
-	/*
-	 * USART2
-	 */
+	USART_Init(USART3, &usart_conf);
+	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 
-	USART_Cmd(USART2, ENABLE);
-
-	USART_Init(USART2, &usart_conf);
-	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
-
-	NVIC_EnableIRQ(USART2_IRQn);
+	NVIC_EnableIRQ(USART3_IRQn);
 }
 
 void sendLineFeed(USART_TypeDef *USARTx)
@@ -81,10 +57,6 @@ void USARTInterrupt(USART_TypeDef *USARTx)
 		//Disable interrupt until all data is received
 		USARTx->CR1 &= ~USART_CR1_RXNEIE;
 
-		//LED2_ON;
-		/*
-		 * Proceed commands
-		 */
 
 		uint8_t data = USARTx->DR;
 
@@ -141,12 +113,7 @@ void USARTInterrupt(USART_TypeDef *USARTx)
 	}
 }
 
-/*void USART1_IRQHandler(void)
-{
-	USARTInterrupt(USART1);
-}*/
-
 void USART2_IRQHandler(void)
 {
-	USARTInterrupt(USART2);
+	USARTInterrupt(USART3);
 }

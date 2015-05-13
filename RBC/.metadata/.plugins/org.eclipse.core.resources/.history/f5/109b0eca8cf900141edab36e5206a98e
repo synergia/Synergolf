@@ -1,0 +1,85 @@
+#include "ADC.h"
+
+extern volatile Data globalData;
+
+void initializeADC()
+{
+	// Battery ADC
+	GPIO_InitTypeDef adcgpio;
+	adcgpio.GPIO_Pin = ADC_BATTERY_PIN;
+	adcgpio.GPIO_Speed = GPIO_Speed_2MHz;
+	adcgpio.GPIO_Mode = GPIO_Mode_AIN;
+	GPIO_Init(ADC_GPIO, &adcgpio);
+
+	RCC_ADCCLKConfig(RCC_PCLK2_Div8); // 72 / 8 = 9 MHz
+
+	ADC1->CR2 = ADC_CR2_ADON | ADC_CR2_CONT; // continuous
+	ADC1->SQR1 = 0; // one channel
+	ADC1->SQR3 = 10; // 10th channel
+	ADC1->SMPR1 |= 0b111; // the longest cycle for 10th channel
+	ADC1->CR1 |= ADC_CR1_EOCIE; // enable interrupt
+
+	// calibration
+	ADC1->CR2 |= ADC_CR2_RSTCAL;
+	while(ADC1->CR2 & ADC_CR2_RSTCAL);
+	ADC1->CR2 |= ADC_CR2_CAL;
+	while(ADC1->CR2 & ADC_CR2_CAL);
+
+	ADC1->CR2 |= ADC_CR2_ADON; // start conversion
+}
+
+void ADC1_2_IRQHandler(void){
+	if(ADC1->SR & ADC_SR_EOC)
+	{
+		// it should be done via DMA (with multichannel)
+		globalData.battery_level_sum += (ADC1->DR >> 4);
+		globalData.sample++;
+
+		if (globalData.sample == 255)
+		{
+
+			globalData.sample = 0;
+			globalData.battery_level = globalData.battery_level_sum >> 8;
+			globalData.battery_level_sum = 0;
+		}
+	}
+}
+
+void initializeBatteryTimer(){
+	NVIC_InitTypeDef NVIC_InitStruct;
+	TIM_TimeBaseInitTypeDef TIM_InitStruct;
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE); // w³¹cza zegar dla peryferium TIM2
+
+	TIM_InitStruct.TIM_ClockDivision = TIM_CKD_DIV1; // dzielnik 1
+	TIM_InitStruct.TIM_CounterMode = TIM_CounterMode_Up; // licznik w górê
+	TIM_InitStruct.TIM_Period = 1000; // okres licznika 1000
+	TIM_InitStruct.TIM_Prescaler = 72; // preskaler 72
+	TIM_TimeBaseInit(TIM2, &TIM_InitStruct); // inicjalizuje TIM2
+
+	TIM_ClearFlag( TIM2, TIM_FLAG_Update ); // czyœci flagê aktualizacji TIM2
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE); // w³¹cza przerwanie aktualizacji TIM2
+	TIM_Cmd(TIM2, ENABLE); // w³¹cza timer TIM2
+
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+    timerInitStructure.TIM_Prescaler = 1999; // 36Hz
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 999;
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM1, &timerInitStructure);
+    TIM_Cmd(TIM1, ENABLE);
+
+    TIM_OCInitTypeDef outputChannelInit = {0,};
+    outputChannelInit.TIM_Pulse = 100;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+    TIM_OC1Init(TIM3, &outputChannelInit);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+}
+
+void TIM2_IRQHandler() {
+	TIM_ClearFlag(TIM2, TIM_FLAG_Update);
+	if (count) count--; //zmniejszamy wartoœæ licznika
+}

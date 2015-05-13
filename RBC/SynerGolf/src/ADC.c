@@ -28,8 +28,7 @@ void initializeADC()
 	ADC1->CR2 |= ADC_CR2_ADON; // start conversion
 }
 
-void ADC1_2_IRQHandler(void)
-{
+void ADC1_2_IRQHandler(void){
 	if(ADC1->SR & ADC_SR_EOC)
 	{
 		// it should be done via DMA (with multichannel)
@@ -42,5 +41,35 @@ void ADC1_2_IRQHandler(void)
 			globalData.battery_level = globalData.battery_level_sum >> 8;
 			globalData.battery_level_sum = 0;
 		}
+	}
+}
+
+void initializeBatteryTimer(){
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+    timerInitStructure.TIM_Prescaler = 35999; // 1Hz - period=2000
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 1999;
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM1, &timerInitStructure);
+
+	TIM_ClearFlag( TIM1, TIM_FLAG_Update ); // czyœci flagê aktualizacji TIM2
+	TIM_ITConfig(TIM1, TIM_IT_CC1, ENABLE); // w³¹cza przerwanie aktualizacji TIM2
+    TIM_Cmd(TIM1, ENABLE);
+}
+
+void TIM1_CC_IRQHandler(void){
+	if (TIM_GetITStatus(TIM1, TIM_IT_CC1) != RESET)
+	{
+		TIM_ClearITPendingBit(TIM1, TIM_IT_CC1);
+		if(globalData.battery_level>ADC_MIN_VALUE){
+			LED3_OFF;
+			TIM1->ARR = 99+((globalData.battery_level-ADC_MIN_VALUE)<<7); //199 -> f=10hz
+		}
+		else{
+			TIM1->ARR = 99;
+			LED3_ON;
+		}
+        LED2_GPIO->ODR ^= LED2_PIN;
 	}
 }

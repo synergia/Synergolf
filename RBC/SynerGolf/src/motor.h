@@ -9,9 +9,9 @@
 #include "stm32f10x_tim.h"
 #include "data.h"
 
-#define SPEED_DC_MIN 50
-#define SPEED_DC_MAX 900
 #define SPEED_DC_RANGE 1023
+#define SPEED_DC_MAX 100
+#define SPEED_DC_MIN 800
 #define SPEED_STEPPER_MIN 332864
 #define SERVO_COMPENSATION -30
 #define MOTOR1 1
@@ -21,7 +21,6 @@
 #define CW 1
 #define CCW 2
 #define STOP 3
-
 
 void initializePWMTimer();
 void initializeDirectionOutput();
