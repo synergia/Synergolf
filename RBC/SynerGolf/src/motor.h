@@ -8,6 +8,7 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_tim.h"
 #include "data.h"
+#include "LED.h"
 
 #define SPEED_DC_RANGE 1023
 #define SPEED_DC_MAX 100
@@ -26,6 +27,7 @@ void initializePWMTimer();
 void initializeDirectionOutput();
 void safeStop();
 void setDCMotor(uint8_t MOTORx,uint16_t Speed, uint8_t direction);
+void setMotorLeds(int MOTORx, int direction);
 void setStepperPosition(int Speed, int Steps, int Direction);
 
 #endif

@@ -133,8 +133,66 @@ void setDCMotor(uint8_t MOTORx,uint16_t Speed, uint8_t direction){ //dir: CW, CC
 		}
 		TIM4->CCR4 = Speed; //M3
 	}
+	if(Speed==SPEED_DC_RANGE){
+		setMotorLeds(MOTORx, STOP);
+	}
+	else{
+		setMotorLeds(MOTORx, direction);
+	}
 }
 
+void setMotorLeds(int MOTORx, int direction){
+	switch (MOTORx){
+	case MOTOR1:
+		if(direction==CW){
+			LED_MOTOR1_CW_ON;
+			LED_MOTOR1_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR1_CW_OFF;
+			LED_MOTOR1_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR1_CW_ON;
+			LED_MOTOR1_CCW_ON;
+		}else{
+			LED_MOTOR1_CW_OFF;
+			LED_MOTOR1_CCW_OFF;
+		}
+		break;
+	case MOTOR2:
+		if(direction==CW){
+			LED_MOTOR2_CW_ON;
+			LED_MOTOR2_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR2_CW_OFF;
+			LED_MOTOR2_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR2_CW_ON;
+			LED_MOTOR2_CCW_ON;
+		}else{
+			LED_MOTOR2_CW_OFF;
+			LED_MOTOR2_CCW_OFF;
+		}
+		break;
+	case MOTOR3:
+		if(direction==CW){
+			LED_MOTOR3_CW_ON;
+			LED_MOTOR3_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR3_CW_OFF;
+			LED_MOTOR3_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR3_CW_ON;
+			LED_MOTOR3_CCW_ON;
+		}else{
+			LED_MOTOR3_CW_OFF;
+			LED_MOTOR3_CCW_OFF;
+		}
+		break;
+	default:
+		break;
+	}
+
+}
 void setStepperPosition(int Speed, int Steps, int Direction){
 	if(Direction==CW){
 		GPIO_ResetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);

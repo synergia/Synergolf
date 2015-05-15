@@ -63,13 +63,13 @@ void TIM1_CC_IRQHandler(void){
 	{
 		TIM_ClearITPendingBit(TIM1, TIM_IT_CC1);
 		if(globalData.battery_level>ADC_MIN_VALUE){
-			LED3_OFF;
+			LED_ADC_RED_OFF;
 			TIM1->ARR = 99+((globalData.battery_level-ADC_MIN_VALUE)<<7); //199 -> f=10hz
 		}
 		else{
 			TIM1->ARR = 99;
-			LED3_ON;
+			LED_ADC_RED_ON;
 		}
-        LED2_GPIO->ODR ^= LED2_PIN;
+        LED_ADC_GREEN_GPIO->ODR ^= LED_ADC_GREEN_PIN;
 	}
 }

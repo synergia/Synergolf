@@ -4,6 +4,7 @@
 #include "system_stm32f10x.h"
 #include "stm32f10x.h"
 
+#include "main.h"
 #include "data.h"
 #include "LED.h"
 #include "APBClocks.h"
@@ -15,10 +16,6 @@
 #include "I2C.h"
 
 extern volatile Data globalData;
-
-void Set24MHzHSI();
-void delay(uint32_t mticks);
-
 int main(void){
 	SystemInit();
 	Set24MHzHSI();
@@ -39,11 +36,11 @@ int main(void){
 
 	LED_off();
 
-	//setDCMotor(MOTOR1, 800, CW);
-	//setDCMotor(MOTOR2, 800, CW);
-	//setDCMotor(MOTOR3, 800, CW);
+	setDCMotor(MOTOR1, 0, STOP);
+	setDCMotor(MOTOR2, 0, STOP);
+	setDCMotor(MOTOR3, 0, STOP);
     while(1){
-    	/*
+/*
     	setDCMotor(MOTOR1, 800, CW);
     	setDCMotor(MOTOR2, 800, CW);
     	setDCMotor(MOTOR3, 800, CW);

@@ -2969,3 +2969,650 @@ Print size information
 Print size information done
 Generate build reports done
 Info: Nothing to build for SynerGolf
+10:00:23 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\I2C.o ..\src\I2C.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\APBClocks.o ..\src\APBClocks.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\NVIC.o ..\src\NVIC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   9428	     28	    300	   9756	   261c	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:04:18 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\NVIC.o ..\src\NVIC.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   9428	     28	    300	   9756	   261c	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:09:06 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   9428	     28	    300	   9756	   261c	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:11:10 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+..\src\motor.c: In function 'setDCMotor':
+..\src\motor.c:94:4: error: 'LED_MOTOR' undeclared (first use in this function)
+..\src\motor.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+..\src\motor.c:95:3: error: expected ';' before '}' token
+10:21:36 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\NVIC.o ..\src\NVIC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\I2C.o ..\src\I2C.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+..\src\LED.c: In function 'initializeLEDGPIO':
+..\src\LED.c:13:6: error: 'LED_MOTOR1_L_PIN' undeclared (first use in this function)
+..\src\LED.c:13:6: note: each undeclared identifier is reported only once for each function it appears in
+..\src\LED.c:13:25: error: 'LED_MOTOR1_R_PIN' undeclared (first use in this function)
+..\src\LED.c:14:6: error: 'LED_MOTOR2_L_PIN' undeclared (first use in this function)
+..\src\LED.c:14:25: error: 'LED_MOTOR2_R_PIN' undeclared (first use in this function)
+..\src\LED.c:15:6: error: 'LED_MOTOR3_L_PIN' undeclared (first use in this function)
+..\src\LED.c:15:25: error: 'LED_MOTOR3_R_PIN' undeclared (first use in this function)
+..\src\LED.c: In function 'LED_off':
+..\src\LED.c:47:2: error: 'LED_MOTOR1_L_OFF' undeclared (first use in this function)
+..\src\LED.c:48:2: error: 'LED_MOTOR1_R_OFF' undeclared (first use in this function)
+..\src\LED.c:49:2: error: 'LED_MOTOR2_L_OFF' undeclared (first use in this function)
+..\src\LED.c:50:2: error: 'LED_MOTOR2_R_OFF' undeclared (first use in this function)
+..\src\LED.c:51:2: error: 'LED_MOTOR3_L_OFF' undeclared (first use in this function)
+..\src\LED.c:52:2: error: 'LED_MOTOR3_R_OFF' undeclared (first use in this function)
+10:22:12 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+..\src\LED.c: In function 'initializeLEDGPIO':
+..\src\LED.c:13:6: error: 'LED_MOTOR1_L_PIN' undeclared (first use in this function)
+..\src\LED.c:13:6: note: each undeclared identifier is reported only once for each function it appears in
+..\src\LED.c:13:25: error: 'LED_MOTOR1_R_PIN' undeclared (first use in this function)
+..\src\LED.c:14:6: error: 'LED_MOTOR2_L_PIN' undeclared (first use in this function)
+..\src\LED.c:14:25: error: 'LED_MOTOR2_R_PIN' undeclared (first use in this function)
+..\src\LED.c:15:6: error: 'LED_MOTOR3_L_PIN' undeclared (first use in this function)
+..\src\LED.c:15:25: error: 'LED_MOTOR3_R_PIN' undeclared (first use in this function)
+10:23:02 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+..\src\LED.c: In function 'initializeLEDGPIO':
+..\src\LED.c:13:6: error: 'LED_MOTOR1_L_PIN' undeclared (first use in this function)
+..\src\LED.c:13:6: note: each undeclared identifier is reported only once for each function it appears in
+..\src\LED.c:13:25: error: 'LED_MOTOR1_R_PIN' undeclared (first use in this function)
+..\src\LED.c:14:6: error: 'LED_MOTOR2_L_PIN' undeclared (first use in this function)
+..\src\LED.c:14:25: error: 'LED_MOTOR2_R_PIN' undeclared (first use in this function)
+..\src\LED.c:15:6: error: 'LED_MOTOR3_L_PIN' undeclared (first use in this function)
+..\src\LED.c:15:25: error: 'LED_MOTOR3_R_PIN' undeclared (first use in this function)
+10:23:24 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+   9460	     28	    300	   9788	   263c	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:33:16 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+..\src\LED.c: In function 'initializeLEDGPIO':
+..\src\LED.c:27:2: warning: implicit declaration of function 'LEDs_SHOW_OFF' [-Wimplicit-function-declaration]
+..\src\LED.c: At top level:
+..\src\LED.c:47:6: warning: conflicting types for 'LEDs_SHOW_OFF' [enabled by default]
+..\src\LED.c:27:2: note: previous implicit declaration of 'LEDs_SHOW_OFF' was here
+..\src\LED.c: In function 'LEDs_SHOW_OFF':
+..\src\LED.c:56:2: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10284	     28	    300	  10612	   2974	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:33:47 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+..\src\LED.c: In function 'LEDs_SHOW_OFF':
+..\src\LED.c:56:2: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10284	     28	    300	  10612	   2974	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:35:03 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+..\src\main.c: In function 'main':
+..\src\main.c:19:2: warning: implicit declaration of function 'Set24MHzHSI' [-Wimplicit-function-declaration]
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+src\main.o: In function `main':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.c:19: undefined reference to `Set24MHzHSI'
+src\LED.o: In function `LEDs_SHOW_OFF':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:56: undefined reference to `delay'
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:58: undefined reference to `delay'
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:65: undefined reference to `delay'
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:67: undefined reference to `delay'
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:70: undefined reference to `delay'
+src\LED.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/LED.c:72: more undefined references to `delay' follow
+collect2.exe: error: ld returned 1 exit status
+10:35:24 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+In file included from ..\src\LED.h:9:0,
+                 from ..\src\LED.c:1:
+..\src\main.h:11:1: error: unknown type name 'Data'
+10:35:50 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+src\main.o: In function `delay':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: multiple definition of `delay'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: first defined here
+src\main.o: In function `Set24MHzHSI':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: multiple definition of `Set24MHzHSI'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: first defined here
+src\USART.o: In function `delay':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: multiple definition of `delay'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: first defined here
+src\USART.o: In function `Set24MHzHSI':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: multiple definition of `Set24MHzHSI'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: first defined here
+src\SysTick.o: In function `delay':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: multiple definition of `delay'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: first defined here
+src\SysTick.o: In function `Set24MHzHSI':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: multiple definition of `Set24MHzHSI'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: first defined here
+src\LED.o: In function `delay':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: multiple definition of `delay'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: first defined here
+src\LED.o: In function `Set24MHzHSI':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: multiple definition of `Set24MHzHSI'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: first defined here
+src\ADC.o: In function `delay':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: multiple definition of `delay'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:15: first defined here
+src\ADC.o: In function `Set24MHzHSI':
+C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: multiple definition of `Set24MHzHSI'
+src\motor.o:C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\Debug/..\src/main.h:22: first defined here
+collect2.exe: error: ld returned 1 exit status
+10:36:24 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10340	     28	    300	  10668	   29ac	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:36:46 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10340	     28	    300	  10668	   29ac	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:37:34 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10340	     28	    300	  10668	   29ac	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:39:04 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10340	     28	    300	  10668	   29ac	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:40:20 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10296	     28	    300	  10624	   2980	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+11:57:29 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+..\src\ADC.c: In function 'TIM1_CC_IRQHandler':
+..\src\ADC.c:66:4: error: 'LED_OFF' undeclared (first use in this function)
+..\src\ADC.c:66:4: note: each undeclared identifier is reported only once for each function it appears in
+11:58:43 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10296	     28	    300	  10624	   2980	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+12:13:41 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\APBClocks.o ..\src\APBClocks.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10296	     28	    300	  10624	   2980	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:13:51 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\APBClocks.o ..\src\APBClocks.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10284	     28	    300	  10612	   2974	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:16:31 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\APBClocks.o ..\src\APBClocks.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10272	     28	    300	  10600	   2968	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:21:16 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10272	     28	    300	  10600	   2968	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:32:16 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+..\src\motor.c: In function 'setMotorLeds':
+..\src\motor.c:178:2: error: 'default' label not within a switch statement
+..\src\motor.c:179:3: error: break statement not within loop or switch
+12:32:21 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+..\src\motor.c: In function 'setMotorLeds':
+..\src\motor.c:178:2: error: 'default' label not within a switch statement
+..\src\motor.c:179:3: error: break statement not within loop or switch
+12:32:29 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10664	     28	    300	  10992	   2af0	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+18:48:42 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10920	     28	    300	  11248	   2bf0	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:50:16 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\APBClocks.o ..\src\APBClocks.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\LED.o ..\src\LED.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\NVIC.o ..\src\NVIC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\ADC.o ..\src\ADC.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\SysTick.o ..\src\SysTick.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\USART.o ..\src\USART.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\I2C.o ..\src\I2C.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10920	     28	    300	  11248	   2bf0	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:51:33 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:53:04 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:53:44 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+10:54:19 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+11:04:45 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+11:06:06 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+11:13:10 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10664	     28	    300	  10992	   2af0	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+11:57:18 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+..\src\motor.c: In function 'setMotorLeds':
+..\src\motor.c:160:3: error: break statement not within loop or switch
+..\src\motor.c:161:2: error: case label not within a switch statement
+..\src\motor.c:175:3: error: break statement not within loop or switch
+..\src\motor.c:176:2: error: case label not within a switch statement
+..\src\motor.c:190:3: error: break statement not within loop or switch
+..\src\motor.c:191:2: error: 'default' label not within a switch statement
+..\src\motor.c:192:3: error: break statement not within loop or switch
+..\src\motor.c: At top level:
+..\src\motor.c:195:1: error: expected identifier or '(' before '}' token
+12:00:35 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10832	     28	    300	  11160	   2b98	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:00:56 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10832	     28	    300	  11160	   2b98	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:06:25 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\main.o ..\src\main.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10880	     28	    300	  11208	   2bc8	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+12:12:59 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+12:13:59 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10712	     28	    300	  11040	   2b20	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:20:39 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10736	     28	    300	  11064	   2b38	SynerGolf.elf
+Print size information done
+Generate build reports done
+Info: Nothing to build for SynerGolf
+Info: Nothing to build for SynerGolf
+12:28:55 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10856	     28	    300	  11184	   2bb0	SynerGolf.elf
+Print size information done
+Generate build reports done
+12:31:05 **** Incremental Build of configuration Debug for project SynerGolf ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m3 -std=gnu90 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I../src -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Libraries\CMSIS\Device\ST\STM32F10x\Include -I..\Libraries\CMSIS\Include -O0 -ffunction-sections -fdata-sections -g -Wall -o src\motor.o ..\src\motor.c 
+arm-atollic-eabi-gcc src\tiny_printf.o src\system_stm32f10x.o src\startup_stm32f10x_md.o src\motor.o src\main.o src\USART.o src\SysTick.o src\NVIC.o src\LED.o src\I2C.o src\APBClocks.o src\ADC.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.o Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.o Libraries\STM32F10x_StdPeriph_Driver\src\misc.o -o SynerGolf.elf -mthumb -mcpu=cortex-m3 -T..\stm32_flash.ld -Wl,--start-group -lc -lm -Wl,--end-group -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=SynerGolf.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x1000 
+D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\jre\bin\java -jar D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\Tools\arm-atollic-reports.jar convert hex sizeinfo SynerGolf.elf 
+Generate build reports...
+Converting build output to hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  10856	     28	    300	  11184	   2bb0	SynerGolf.elf
+Print size information done
+Generate build reports done

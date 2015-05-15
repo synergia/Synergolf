@@ -1,0 +1,77 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include "system_stm32f10x.h"
+#include "stm32f10x.h"
+
+#include "data.h"
+#include "LED.h"
+#include "APBClocks.h"
+#include "SysTick.h"
+#include "USART.h"
+#include "NVIC.h"
+#include "motor.h"
+#include "ADC.h"
+#include "I2C.h"
+
+int main(void){
+	SystemInit();
+	Set24MHzHSI();
+
+	initializeAPB();
+	initializeLEDGPIO();
+	initializeSysTick();
+
+	initializePWMTimer();
+	initializeDirectionOutput();
+
+	initializeUSART();
+	//initializeI2C();
+
+	initializeADC();
+	initializeBatteryTimer();
+	initializeNVIC();
+
+	LED_off();
+
+	//setDCMotor(MOTOR1, 800, CW);
+	//setDCMotor(MOTOR2, 800, CW);
+	//setDCMotor(MOTOR3, 800, CW);
+    while(1){
+    	/*
+    	setDCMotor(MOTOR1, 800, CW);
+    	setDCMotor(MOTOR2, 800, CW);
+    	setDCMotor(MOTOR3, 800, CW);
+    	setStepperPosition(200, 200, CW);
+    	delay(1000);
+    	setDCMotor(MOTOR1, 800, STOP);
+    	setDCMotor(MOTOR2, 800, STOP);
+    	setDCMotor(MOTOR3, 800, STOP);
+    	delay(1000);
+    	setDCMotor(MOTOR1, 800, CCW);
+    	setDCMotor(MOTOR2, 800, CCW);
+    	setDCMotor(MOTOR3, 800, CCW);
+    	setStepperPosition(200, 200, CCW);
+    	delay(1000);
+    	setDCMotor(MOTOR1, 800, STOP);
+    	setDCMotor(MOTOR2, 800, STOP);
+    	setDCMotor(MOTOR3, 800, STOP);
+    	delay(1000);*/
+/*
+    	setStepperPosition(200, 2000, CW);
+    	while(globalData.steps);
+    	delay(500);
+    	setStepperPosition(150, 2000, CCW);
+    	while(globalData.steps);
+    	delay(500);*/
+
+/*
+    	setDirection(MOTOR3, CW);
+    	delay(1000);
+    	setDirection(MOTOR3, CCW);
+    	delay(1000);
+    	setDirection(MOTOR3, STOP);
+    	delay(1000);
+*/
+    }
+}
