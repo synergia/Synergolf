@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;SynerGolf/src/stepper.c&apos;" deleteContents="false" description="Delete resource &apos;SynerGolf/src/stepper.c&apos;" element1="/SynerGolf/src/stepper.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1462891395954"/>&#x0A;<refactoring comment="Delete resource &apos;SynerGolf/src/stepper.h&apos;" deleteContents="false" description="Delete resource &apos;SynerGolf/src/stepper.h&apos;" element1="/SynerGolf/src/stepper.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1462891397743"/>
+</session>

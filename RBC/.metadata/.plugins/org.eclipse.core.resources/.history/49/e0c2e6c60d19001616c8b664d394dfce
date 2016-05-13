@@ -1,0 +1,385 @@
+#include "motor.h"
+
+#define mSetStepperLeft() \
+do{\
+	GPIO_ResetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);\
+	GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);\
+}while(0)
+
+#define mSetStepperRight() \
+do{\
+	GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);\
+	GPIO_SetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);\
+}while(0)
+
+#define mToggleStepper() \
+do{\
+	MOTOR_STEPPER_CLK_GPIO->ODR ^= MOTOR_STEPPER_CLK_PIN;\
+}while(0)
+
+#define mSetStepperStop() GPIO_SetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN)
+
+#define dDefaultPutterSpeed 1200U
+#define dMaxPutterTilt		200
+#define dAfterPuttTilt		50
+
+
+
+void initializePWMTimer()
+{
+	GPIO_InitTypeDef pwmgpio;
+	pwmgpio.GPIO_Mode = GPIO_Mode_AF_PP;
+	pwmgpio.GPIO_Speed = GPIO_Speed_50MHz;
+
+	pwmgpio.GPIO_Pin = MOTOR1_PWM1_PIN;
+	GPIO_Init(MOTOR1_PWM1_GPIO, &pwmgpio);
+
+	pwmgpio.GPIO_Pin = MOTOR1_PWM2_PIN;
+	GPIO_Init(MOTOR1_PWM2_GPIO, &pwmgpio);
+
+	pwmgpio.GPIO_Pin = MOTOR2_PWM4_PIN;
+	GPIO_Init(MOTOR2_PWM4_GPIO, &pwmgpio);
+
+	GPIO_PinRemapConfig(GPIO_FullRemap_TIM3, ENABLE);
+
+
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+    timerInitStructure.TIM_Prescaler = 19; //PWM 3.6kHz
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 999;
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM3, &timerInitStructure);//PWM3
+    TIM_TimeBaseInit(TIM4, &timerInitStructure);//PWM4
+    TIM_Cmd(TIM3, ENABLE);
+    TIM_Cmd(TIM4, ENABLE);
+
+    TIM_OCInitTypeDef outputChannelInit = {0,};
+    outputChannelInit.TIM_OCMode = TIM_OCMode_PWM1;
+    outputChannelInit.TIM_Pulse = 100;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+    TIM_OC1Init(TIM3, &outputChannelInit);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    TIM_OC4Init(TIM3, &outputChannelInit);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    TIM_OC4Init(TIM4, &outputChannelInit);
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+
+    //Timer for stepper motor
+    TIM_TimeBaseInitTypeDef timerStepper;
+    timerStepper.TIM_Prescaler = 3599; // 1000Hz - period=2000
+    timerStepper.TIM_CounterMode = TIM_CounterMode_Up;
+    timerStepper.TIM_Period = 1999;
+    timerStepper.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerStepper.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM2, &timerStepper);
+
+    outputChannelInit.TIM_OCMode = TIM_OCMode_Timing;
+    outputChannelInit.TIM_Pulse = 100;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+	TIM_ITConfig(TIM2, TIM_IT_CC1, ENABLE); // w³¹cza przerwanie aktualizacji TIM1
+    TIM_Cmd(TIM2, ENABLE);
+}
+
+void initializeDirectionOutput()
+{
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_NoJTRST,ENABLE); // Disable NJTRST, PB4 is Alternate Function
+	GPIO_InitTypeDef dir;
+	dir.GPIO_Mode = GPIO_Mode_Out_PP;
+	dir.GPIO_Speed = GPIO_Speed_2MHz;
+
+	dir.GPIO_Pin = MOTOR1_IN1A_PIN;
+	GPIO_Init(MOTOR1_IN1A_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_IN1B_PIN;
+	GPIO_Init(MOTOR1_IN1B_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_IN2A_PIN;
+	GPIO_Init(MOTOR1_IN2A_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR1_IN2B_PIN;
+	GPIO_Init(MOTOR1_IN2B_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR2_IN2A_PIN;
+	GPIO_Init(MOTOR2_IN2A_GPIO, &dir);
+
+	dir.GPIO_Pin = MOTOR2_IN2B_PIN;
+	GPIO_Init(MOTOR2_IN2B_GPIO, &dir);
+
+	//stepper
+	dir.GPIO_Pin =  MOTOR_STEPPER_CLK_PIN;
+	GPIO_Init( MOTOR_STEPPER_CLK_GPIO, &dir);
+
+	dir.GPIO_Pin =  MOTOR_STEPPER_CW_PIN;
+	GPIO_Init( MOTOR_STEPPER_CW_GPIO, &dir);
+
+	dir.GPIO_Pin =  MOTOR_STEPPER_EN_PIN;
+	GPIO_Init( MOTOR_STEPPER_EN_GPIO, &dir);
+}
+
+void setDCMotor(uint8_t MOTORx,uint16_t Speed, uint8_t direction){ //dir: CW, CCW, STOP
+	Speed = (SPEED_DC_RANGE - Speed);
+	//(Speed<SPEED_DC_MAX) Speed = SPEED_DC_MAX;
+	//else if(Speed>SPEED_DC_MIN) Speed = SPEED_DC_RANGE;
+	//speed od 100 do 1023;
+	if(MOTORx==MOTOR1){
+		if(direction==CW){
+			GPIO_SetBits(MOTOR1_IN1A_GPIO, MOTOR1_IN1A_PIN);
+			GPIO_ResetBits(MOTOR1_IN1B_GPIO, MOTOR1_IN1B_PIN);
+		}
+		else if(direction==CCW){
+			GPIO_ResetBits(MOTOR1_IN1A_GPIO, MOTOR1_IN1A_PIN);
+			GPIO_SetBits(MOTOR1_IN1B_GPIO, MOTOR1_IN1B_PIN);
+		}
+		else /*if(direction==STOP)*/{
+			GPIO_ResetBits(MOTOR1_IN1A_GPIO, MOTOR1_IN1A_PIN);
+			GPIO_ResetBits(MOTOR1_IN1B_GPIO, MOTOR1_IN1B_PIN);
+		}
+
+		TIM3->CCR1 = Speed; //M1 PWM (out 0f 1000)
+	}
+	else if(MOTORx==MOTOR2){
+		if(direction==CW){
+			GPIO_SetBits(MOTOR1_IN2A_GPIO, MOTOR1_IN2A_PIN);
+			GPIO_ResetBits(MOTOR1_IN2B_GPIO, MOTOR1_IN2B_PIN);
+		}
+		else if(direction==CCW){
+			GPIO_ResetBits(MOTOR1_IN2A_GPIO, MOTOR1_IN2A_PIN);
+			GPIO_SetBits(MOTOR1_IN2B_GPIO, MOTOR1_IN2B_PIN);
+		}
+		else /*if(direction==STOP)*/{
+			GPIO_ResetBits(MOTOR1_IN2A_GPIO, MOTOR1_IN2A_PIN);
+			GPIO_ResetBits(MOTOR1_IN2B_GPIO, MOTOR1_IN2B_PIN);
+		}
+		TIM3->CCR4 = Speed; //M2
+	}
+	else if(MOTORx==MOTOR3){
+		if(direction==CW){
+			GPIO_SetBits(MOTOR2_IN2A_GPIO, MOTOR2_IN2A_PIN);
+			GPIO_ResetBits(MOTOR2_IN2B_GPIO, MOTOR2_IN2B_PIN);
+		}
+		else if(direction==CCW){
+			GPIO_ResetBits(MOTOR2_IN2A_GPIO, MOTOR2_IN2A_PIN);
+			GPIO_SetBits(MOTOR2_IN2B_GPIO, MOTOR2_IN2B_PIN);
+		}
+		else /*if(direction==STOP)*/{
+			GPIO_ResetBits(MOTOR2_IN2A_GPIO, MOTOR2_IN2A_PIN);
+			GPIO_ResetBits(MOTOR2_IN2B_GPIO, MOTOR2_IN2B_PIN);
+		}
+		TIM4->CCR4 = Speed; //M3
+	}
+	if(Speed==SPEED_DC_RANGE){
+		setMotorLeds(MOTORx, STOP);
+	}
+	else{
+		setMotorLeds(MOTORx, direction);
+	}
+}
+
+void setMotorLeds(int MOTORx, int direction){
+	switch (MOTORx){
+	case MOTOR1:
+		if(direction==CW){
+			LED_MOTOR1_CW_ON;
+			LED_MOTOR1_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR1_CW_OFF;
+			LED_MOTOR1_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR1_CW_ON;
+			LED_MOTOR1_CCW_ON;
+		}else{
+			LED_MOTOR1_CW_OFF;
+			LED_MOTOR1_CCW_OFF;
+		}
+		break;
+	case MOTOR2:
+		if(direction==CW){
+			LED_MOTOR2_CW_ON;
+			LED_MOTOR2_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR2_CW_OFF;
+			LED_MOTOR2_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR2_CW_ON;
+			LED_MOTOR2_CCW_ON;
+		}else{
+			LED_MOTOR2_CW_OFF;
+			LED_MOTOR2_CCW_OFF;
+		}
+		break;
+	case MOTOR3:
+		if(direction==CW){
+			LED_MOTOR3_CW_ON;
+			LED_MOTOR3_CCW_OFF;
+		}else if(direction==CCW){
+			LED_MOTOR3_CW_OFF;
+			LED_MOTOR3_CCW_ON;
+		}else if(direction==STOP){
+			LED_MOTOR3_CW_ON;
+			LED_MOTOR3_CCW_ON;
+		}else{
+			LED_MOTOR3_CW_OFF;
+			LED_MOTOR3_CCW_OFF;
+		}
+		break;
+	default:
+		break;
+	}
+
+}
+
+#if 0
+void setStepperPosition(int Speed, int Steps, int Direction){
+	if(Direction==CW){
+		mSetStepperLeft();
+	}
+	else if(Direction==CCW){
+		mSetStepperRight();
+	}
+	else /*if(direction==STOP)*/{
+		mSetStepperStop();
+	}
+	SysTick_Config(SPEED_STEPPER_MIN-(Speed<<10));
+	globalData.stepsCounter = Steps;
+}
+#endif
+
+void safeStop()
+{
+	//TIM2->CCR1 = 0; // stop motor
+	//TIM3->CCR2 = 127+255;
+}
+
+void TIM2_IRQHandler(void)//Stepper handler
+{
+	static uint16_t Speed = 0U; //950-max, 1950-min
+	static uint16_t DelayCounter = 0U;
+	static uint32_t WaitAfterPuttCounter=0U;
+
+	switch(globalData.putterState)
+	{
+	case dPutterState_None:
+		if(globalData.putterRequest != dPutterRequest_None)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_left:
+		mSetStepperLeft();
+
+		Speed = dDefaultPutterSpeed;
+
+		if(globalData.stepsCounter>-dMaxPutterTilt)
+		{
+			if(DelayCounter>=Speed)
+			{
+				globalData.stepsCounter--;
+				mToggleStepper();
+				DelayCounter=0;
+			}
+			else DelayCounter++;
+		}
+
+
+		if(   (globalData.putterRequest == dPutterRequest_right)
+			||(globalData.putterRequest == dPutterRequest_stop)
+			||(globalData.putterRequest == dPutterRequest_putt)
+		   )
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_right:
+		mSetStepperRight();
+
+		Speed = dDefaultPutterSpeed;
+		if(globalData.stepsCounter<dMaxPutterTilt)
+		{
+			if(DelayCounter>=Speed)
+			{
+				globalData.stepsCounter++;
+				mToggleStepper();
+				DelayCounter=0;
+			}
+			else DelayCounter++;
+		}
+
+		if (  (globalData.putterRequest == dPutterRequest_left)
+			||(globalData.putterRequest == dPutterRequest_stop)
+			||(globalData.putterRequest == dPutterRequest_putt)
+			)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_stop:
+
+		if (  (globalData.putterRequest == dPutterRequest_left)
+			||(globalData.putterRequest == dPutterRequest_right)
+			||(globalData.putterRequest == dPutterRequest_putt)
+			)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_putt:
+		Speed = 1450+(globalData.stepsCounter<<1);
+
+		if(globalData.stepsCounter>0) //right
+		{
+			mSetStepperLeft();
+		}
+		else
+		{
+			globalData.stepsCounter = -globalData.stepsCounter;//make it positive
+			mSetStepperRight();
+		}
+
+		globalData.putterState = dPutterState_putting1;
+		break;
+
+	case dPutterState_putting1:
+		mToggleStepper();
+		globalData.stepsCounter--;
+		if(globalData.stepsCounter<-dAfterPuttTilt)//Max
+		{
+			//globalData.putterState = dPutterState_putting2;
+			//WaitAfterPuttCounter=1000U;
+		}
+		break;
+
+	case dPutterState_putting2:
+		mSetStepperStop();
+		WaitAfterPuttCounter--;
+		if(WaitAfterPuttCounter==0)
+		{
+			globalData.putterState = dPutterState_putting3;
+		}
+		break;
+
+	case dPutterState_putting3:
+		mToggleStepper();
+		globalData.stepsCounter++;
+		if(globalData.stepsCounter==0)
+		{
+			globalData.putterState = dPutterState_None;
+		}
+		break;
+	}
+}

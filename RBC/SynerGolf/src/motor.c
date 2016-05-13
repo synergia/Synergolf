@@ -1,5 +1,30 @@
 #include "motor.h"
 
+#define mSetStepperLeft() \
+do{\
+	GPIO_ResetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);\
+	GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);\
+}while(0)
+
+#define mSetStepperRight() \
+do{\
+	GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);\
+	GPIO_SetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);\
+}while(0)
+
+#define mToggleStepper() \
+do{\
+	MOTOR_STEPPER_CLK_GPIO->ODR ^= MOTOR_STEPPER_CLK_PIN;\
+}while(0)
+
+#define mSetStepperStop() GPIO_SetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN)
+
+#define dDefaultPutterSpeed 1200U
+#define dMaxPutterTilt		200
+#define dAfterPuttTilt		50
+
+
+
 void initializePWMTimer()
 {
 	GPIO_InitTypeDef pwmgpio;
@@ -16,7 +41,6 @@ void initializePWMTimer()
 	GPIO_Init(MOTOR2_PWM4_GPIO, &pwmgpio);
 
 	GPIO_PinRemapConfig(GPIO_FullRemap_TIM3, ENABLE);
-
 
 
     TIM_TimeBaseInitTypeDef timerInitStructure;
@@ -44,6 +68,24 @@ void initializePWMTimer()
 
     TIM_OC4Init(TIM4, &outputChannelInit);
     TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+
+    //Timer for stepper motor
+    TIM_TimeBaseInitTypeDef timerStepper;
+    timerStepper.TIM_Prescaler = 3599; // 1000Hz - period=2000
+    timerStepper.TIM_CounterMode = TIM_CounterMode_Up;
+    timerStepper.TIM_Period = 1999;
+    timerStepper.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerStepper.TIM_RepetitionCounter = 0;
+    TIM_TimeBaseInit(TIM2, &timerStepper);
+
+    outputChannelInit.TIM_OCMode = TIM_OCMode_Timing;
+    outputChannelInit.TIM_Pulse = 100;
+    outputChannelInit.TIM_OutputState = TIM_OutputState_Enable;
+    outputChannelInit.TIM_OCPolarity = TIM_OCPolarity_High;
+
+	TIM_ITConfig(TIM2, TIM_IT_CC1, ENABLE); // w³¹cza przerwanie aktualizacji TIM1
+    TIM_Cmd(TIM2, ENABLE);
 }
 
 void initializeDirectionOutput()
@@ -84,8 +126,8 @@ void initializeDirectionOutput()
 
 void setDCMotor(uint8_t MOTORx,uint16_t Speed, uint8_t direction){ //dir: CW, CCW, STOP
 	Speed = (SPEED_DC_RANGE - Speed);
-	if(Speed<SPEED_DC_MAX) Speed = SPEED_DC_MAX;
-	else if(Speed>SPEED_DC_MIN) Speed = SPEED_DC_RANGE;
+	//(Speed<SPEED_DC_MAX) Speed = SPEED_DC_MAX;
+	//else if(Speed>SPEED_DC_MIN) Speed = SPEED_DC_RANGE;
 	//speed od 100 do 1023;
 	if(MOTORx==MOTOR1){
 		if(direction==CW){
@@ -193,23 +235,185 @@ void setMotorLeds(int MOTORx, int direction){
 	}
 
 }
+
+#if 0
 void setStepperPosition(int Speed, int Steps, int Direction){
 	if(Direction==CW){
-		GPIO_ResetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);
-		GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);
+		mSetStepperLeft();
 	}
 	else if(Direction==CCW){
-		GPIO_ResetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);
-		GPIO_SetBits( MOTOR_STEPPER_CW_GPIO, MOTOR_STEPPER_CW_PIN);
+		mSetStepperRight();
 	}
 	else /*if(direction==STOP)*/{
-		GPIO_SetBits( MOTOR_STEPPER_EN_GPIO, MOTOR_STEPPER_EN_PIN);
+		mSetStepperStop();
 	}
 	SysTick_Config(SPEED_STEPPER_MIN-(Speed<<10));
-	globalData.steps = Steps;
+	globalData.stepsCounter = Steps;
 }
+#endif
+
 void safeStop()
 {
 	//TIM2->CCR1 = 0; // stop motor
 	//TIM3->CCR2 = 127+255;
+}
+
+void TIM2_IRQHandler(void)//Stepper handler
+{
+	static uint16_t Speed = 0U; //~1000-max, 2200-min
+	static uint16_t DelayCounter = 0U;
+	static uint32_t WaitAfterPuttCounter=0U;
+
+	switch(globalData.putterState)
+	{
+	case dPutterState_None:
+		if(globalData.putterRequest != dPutterRequest_None)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_left:
+		mSetStepperLeft();
+
+		Speed = dDefaultPutterSpeed;
+
+		if(globalData.stepsCounter>-dMaxPutterTilt)
+		{
+			if(DelayCounter>=Speed)
+			{
+				globalData.stepsCounter--;
+				mToggleStepper();
+				DelayCounter=0;
+			}
+			else DelayCounter++;
+		}
+
+
+		if(   (globalData.putterRequest == dPutterRequest_right)
+			||(globalData.putterRequest == dPutterRequest_stop)
+			||(globalData.putterRequest == dPutterRequest_putt)
+		   )
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_right:
+		mSetStepperRight();
+
+		Speed = dDefaultPutterSpeed;
+		if(globalData.stepsCounter<dMaxPutterTilt)
+		{
+			if(DelayCounter>=Speed)
+			{
+				globalData.stepsCounter++;
+				mToggleStepper();
+				DelayCounter=0;
+			}
+			else DelayCounter++;
+		}
+
+		if (  (globalData.putterRequest == dPutterRequest_left)
+			||(globalData.putterRequest == dPutterRequest_stop)
+			||(globalData.putterRequest == dPutterRequest_putt)
+			)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_stop:
+
+		if (  (globalData.putterRequest == dPutterRequest_left)
+			||(globalData.putterRequest == dPutterRequest_right)
+			||(globalData.putterRequest == dPutterRequest_putt)
+			)
+		{
+			globalData.putterState = globalData.putterRequest;
+			globalData.putterRequest = dPutterRequest_None;
+		}
+		break;
+
+	case dPutterState_putt:
+		if(globalData.stepsCounter>0) //right
+		{
+			mSetStepperLeft();
+			globalData.putterDir = dPutterDir_Left;
+		}
+		else if(globalData.stepsCounter<0)
+		{
+			globalData.stepsCounter = -globalData.stepsCounter;//make it positive
+			mSetStepperRight();
+			globalData.putterDir = dPutterDir_Right;
+		}
+		else
+		{
+			globalData.putterState = dPutterState_None;
+			break;
+		}
+		Speed = 2200-(globalData.stepsCounter*5); //because why not
+
+		DelayCounter=0;
+		globalData.putterState = dPutterState_putting1;
+		break;
+
+	case dPutterState_putting1:
+		if(DelayCounter>=Speed)
+		{
+			if(globalData.stepsCounter>-dAfterPuttTilt)//Max
+			{
+				globalData.stepsCounter--;
+				mToggleStepper();
+			}
+			else
+			{
+				globalData.putterState = dPutterState_putting2;
+				Speed = 1800;
+				if(dPutterDir_Left == globalData.putterDir)
+				{
+					mSetStepperRight();
+				}
+				else
+				{
+					mSetStepperLeft();
+				}
+				WaitAfterPuttCounter=100000U;
+			}
+			DelayCounter=0;
+		}
+		else DelayCounter++;
+		break;
+
+	case dPutterState_putting2:
+		WaitAfterPuttCounter--;
+		if(WaitAfterPuttCounter==0)
+		{
+			globalData.putterState = dPutterState_putting3;
+			DelayCounter=0;
+		}
+		break;
+
+	case dPutterState_putting3:
+		if(DelayCounter>=Speed)
+		{
+			if(++globalData.stepsCounter==0)
+			{
+				globalData.putterState = dPutterState_None;
+			}
+			else
+			{
+				mToggleStepper();
+			}
+			DelayCounter=0;
+		}
+		else DelayCounter++;
+
+
+
+		break;
+	}
 }

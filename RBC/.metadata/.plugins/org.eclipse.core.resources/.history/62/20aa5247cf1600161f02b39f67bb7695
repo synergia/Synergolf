@@ -1,0 +1,27 @@
+#ifndef DATA_H_
+#define DATA_H_
+
+#include <stdint.h>
+#include <stdlib.h>
+
+typedef enum
+{
+	dPutter_stop,
+	dPutter_left,
+	dPutter_right,
+} PutterMovement_T;
+typedef struct
+{
+	uint8_t communication_safety; //in SysTick, if still 0, safeStop
+
+	uint8_t  sample;
+	uint32_t battery_level_sum;
+	uint16_t steps;
+	PutterMovement_T putterMovement;
+	uint32_t battery_level; // average from 256 samples
+
+} Data;
+
+volatile Data globalData;
+
+#endif

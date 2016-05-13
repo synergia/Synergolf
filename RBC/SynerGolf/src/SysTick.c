@@ -17,11 +17,6 @@ void initializeSysTick()
 
 void SysTick_Handler(void)
 {
-	if(globalData.steps>0){
-		MOTOR_STEPPER_CLK_GPIO->ODR ^= MOTOR_STEPPER_CLK_PIN;
-		globalData.steps--;
-	}
-
 	// check €connection
 	if (globalData.communication_safety == 0)
 		safeStop();

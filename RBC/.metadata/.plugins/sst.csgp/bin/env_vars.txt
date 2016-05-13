@@ -1,4 +1,4 @@
-D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\
-D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.csgp_1.0.5.201402181534\CSHOME
-D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ARMTools
+C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\
+C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.csgp_1.0.5.201408221116\CSHOME
+C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ARMTools
 C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\.metadata\.plugins\sst.tm

@@ -53,8 +53,8 @@ void initializeBatteryTimer(){
     timerInitStructure.TIM_RepetitionCounter = 0;
     TIM_TimeBaseInit(TIM1, &timerInitStructure);
 
-	TIM_ClearFlag( TIM1, TIM_FLAG_Update ); // czyœci flagê aktualizacji TIM2
-	TIM_ITConfig(TIM1, TIM_IT_CC1, ENABLE); // w³¹cza przerwanie aktualizacji TIM2
+	TIM_ClearFlag( TIM1, TIM_FLAG_Update ); // czyœci flagê aktualizacji TIM1
+	TIM_ITConfig(TIM1, TIM_IT_CC1, ENABLE); // w³¹cza przerwanie aktualizacji TIM1
     TIM_Cmd(TIM1, ENABLE);
 }
 

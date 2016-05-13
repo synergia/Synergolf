@@ -1,0 +1,94 @@
+!SESSION 2016-05-10 15:38:40.644 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86 C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\.cproject
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2016-05-10 15:39:29.781
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2016-05-10 15:39:29.781
+!MESSAGE OS info: Windows 7, 6.1
+
+!ENTRY TrueSTUDIO 4 0 2016-05-10 15:39:34.631
+!MESSAGE Target:ARM, Model:Lite, Version:5.3.0, Installation dir:/C:/Program Files (x86)/Atollic/TrueSTUDIO for ARM Lite 5.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2016-05-10 15:39:36.191
+!MESSAGE License 1111-1111-1111-1111
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-10 15:39:38.017
+!MESSAGE NLS missing message: MarketingDialog_This_window_is_not_displayedin_pro in: com.atollic.truestudio.startup.exposed.messages
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-10 15:39:38.020
+!MESSAGE NLS missing message: MarketingDialog_btnUpgradeToPro_text in: com.atollic.truestudio.startup.exposed.messages
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2016-05-10 15:53:33.505
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:34.509
+!MESSAGE sst.gp.core earlyStartup()
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:34.589
+!MESSAGE Register ResourceChangeListener to current workspace
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:34.609
+!MESSAGE Register WorkspaceSelectionListener to current workspace
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.649
+!MESSAGE ##sst.gp.core Util##PLATFORM_INSTALL_LOCATION: C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.649
+!MESSAGE Platform installed location : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.659
+!MESSAGE IS_ATOLLIC_PLUGIN_INSTALLED : true
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.659
+!MESSAGE ATOLLIC_INSTALL_STATUS(stm32): -1
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.659
+!MESSAGE ATOLLIC_INSTALL_STATUS(avr): -1
+
+!ENTRY sst.gp.core 1 0 2016-05-10 15:53:35.659
+!MESSAGE ATOLLIC_INSTALL_STATUS(arm): 2
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:36.089
+!MESSAGE iconv is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:36.209
+!MESSAGE est is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:36.849
+!MESSAGE libiconv-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:37.049
+!MESSAGE libintl-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:38.131
+!MESSAGE xerces-c_2_7 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2016-05-10 15:53:38.241
+!MESSAGE RIMXJNI is loaded.
+
+!ENTRY sst.csgp 1 0 2016-05-10 15:53:40.847
+!MESSAGE platform install loc : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.tm 1 0 2016-05-10 15:53:40.927
+!MESSAGE C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\
+
+!ENTRY sst.tm 1 0 2016-05-10 15:53:41.387
+!MESSAGE C:\Users\Kuba\Dysk Google\synergia\Synergolf\RBC\SynerGolf\.metadata\.plugins\sst.tm
+
+!ENTRY sst.tm 1 0 2016-05-10 15:53:49.976
+!MESSAGE 
+
+
+---------------------------------------------------
+2016/05/10 15:53:49
+---------------------------------------------------
+
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2016-05-10 15:58:42.969
+!MESSAGE Unloading product manager

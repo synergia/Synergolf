@@ -28,6 +28,6 @@ void initializeDirectionOutput();
 void safeStop();
 void setDCMotor(uint8_t MOTORx,uint16_t Speed, uint8_t direction);
 void setMotorLeds(int MOTORx, int direction);
-void setStepperPosition(int Speed, int Steps, int Direction);
+//void setStepperPosition(int Speed, int Steps, int Direction);
 
 #endif

@@ -1,8 +1,8 @@
 [INFO]
-CODE_SCROLL_HOME=D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\
-CODE_SCROLL_INCLUDE=D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\include
+CODE_SCROLL_HOME=C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\
+CODE_SCROLL_INCLUDE=C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\include
 JAVA_BIN_DIR=\bin
-DOTFONTPATH=D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\fonts
+DOTFONTPATH=C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\fonts
 CS_TARGETCCFORCPA_SUPPORT_BBOOL='y'
 
 JAR=\bin\jar
@@ -35,20 +35,20 @@ FRAMEWORK_SDK_DIR=
 FRAMEWORK_VERSION=
 ASSEMBLY_FOLDERS=
 CS_HOST_NAME=win
-HOST_IP=192.168.1.108
+HOST_IP=127.0.0.1
 CS_TARGET_NAME=win
 CS_TARGET_CPUTYPE=
-RG_FONT_PATH=D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\fonts\NGULIM.TTF
+RG_FONT_PATH=C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\fonts\NGULIM.TTF
 RG_OS_LANG=euc-kr
-CS_COMMON_CFLAG='/Dnull /ID:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\include'
+CS_COMMON_CFLAG='/Dnull /IC:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\include'
 
 COMPILE_REDIRECTION='>'
 
-PATH=D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\;D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\bin;D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib;\bin;
+PATH=C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\;C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\bin;C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib;\bin;
 LIBPATH=
 
-CS_LIBRARY="D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib"
-CLASSPATH="D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\GUI.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\GNU.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\CS_API.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\CS_RIMXJ.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\CS_JAVASSIST.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\xp.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\xt.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\jcommon-1.0.0.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.20140er.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\ProcessExecutor.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\groovy-1.5.6.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\getConfigure.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\asm-2.2.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\y-2.5.0.4.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\swingx-0.9.5.jar";"D:\Program Files (x86)\TrueSTUDIO for ARM Lite 5.0.0\ide\plugins\sst.tm_1.1.2.201402181534\CSHOME\\lib\swingx-beaninfo-0.9.5.jar"
+CS_LIBRARY="C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib"
+CLASSPATH="C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\GUI.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\GNU.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\CS_API.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\CS_RIMXJ.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\CS_JAVASSIST.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\xp.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\xt.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\jcommon-1.0.0.jar";"C:\Program Files (xer.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\ProcessExecutor.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\groovy-1.5.6.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\getConfigure.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\asm-2.2.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\y-2.5.0.4.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\swingx-0.9.5.jar";"C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\\lib\swingx-beaninfo-0.9.5.jar"
 
 CS_TYPE=
 CS_INFO=CodeScroll  v1.0 build-2009120113

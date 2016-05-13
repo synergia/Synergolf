@@ -24,4 +24,11 @@ void initializeNVIC()
 	nvic_tim1.NVIC_IRQChannelPreemptionPriority = 0; // priorytet
 	nvic_tim1.NVIC_IRQChannelSubPriority = 3; // podgrupa
 	NVIC_Init(&nvic_tim1); // inicjalizacja linii przerwania
+
+	NVIC_InitTypeDef nvic_tim2;
+	nvic_tim2.NVIC_IRQChannel =  TIM2_IRQn; // wybór linii przerwania
+	nvic_tim2.NVIC_IRQChannelCmd = ENABLE; // w³¹czenie linii
+	nvic_tim2.NVIC_IRQChannelPreemptionPriority = 0; // priorytet
+	nvic_tim2.NVIC_IRQChannelSubPriority = 4; // podgrupa
+	NVIC_Init(&nvic_tim2); // inicjalizacja linii przerwania
 }
